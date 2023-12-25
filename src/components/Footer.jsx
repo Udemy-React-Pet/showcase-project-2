@@ -6,7 +6,13 @@ function Footer() {
       <div className='footer-copyright'>
         <div className='container'>
           © {new Date().getFullYear()} Copyright Text
-          <a className='grey-text indigo lighten-4 right' href='#!'>
+          <a
+            className='grey-text indigo lighten-4 right'
+            href='https://github.com/Udemy-React-Pet/showcase-project-2'
+            target='_blank'
+            without
+            rel='noreferrer'
+          >
             Repo
           </a>
         </div>
