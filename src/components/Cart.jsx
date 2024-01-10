@@ -1,7 +1,13 @@
 import React from 'react';
 
-function Cart(props) {
-	const {quantity = 0, handleCartShown = Function.prototype} = props;
+import { useContext } from 'react';
+
+import { ShowcaseContext } from '../context';
+
+function Cart() {
+	const { order, handleCartShown = Function.prototype} = useContext(ShowcaseContext);
+
+	const quantity = order.length;
 
 	return (
 		<div 

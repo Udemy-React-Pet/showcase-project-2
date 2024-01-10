@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { ShowcaseContext } from '../context';
 
 function GoodsItem(props) {
 
-  const { id, name, description, price, full_background, addToCart= Function.prototype } = props;
+  const { id, name, description, price, full_background } = props;
+
+	const { addToCart } = useContext(ShowcaseContext);
 
 	const defaultImage = `https://placehold.co/600x400?text=${name}`;
 

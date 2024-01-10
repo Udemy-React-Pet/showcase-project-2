@@ -1,15 +1,16 @@
-import React from 'react';
+import { useContext } from 'react';
+
+import { ShowcaseContext } from '../context';
 
 function CartItem(props) {
 	const { 
 		id, 
 		name, 
 		price, 
-		quantity, 
-		removeFromCart = Function.prototype,
-		decQuantity = Function.prototype,
-		incQuantity = Function.prototype
+		quantity
 	 } = props;
+
+	 const { removeFromCart, incQuantity, decQuantity } = useContext(ShowcaseContext);
 
 	return (
 		<li className='collection-item'>
